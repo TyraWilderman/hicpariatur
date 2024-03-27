@@ -1,0 +1,49 @@
+{
+  "name": "hicpariatur",
+  "version": "1.0.0",
+  "description": "This is a simple library containing classes with immutable operations to use for 2d Geometry tasks.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "prepublish": "tsc && npm test",
+  "scripts": {
+    "build": "npx tsc",
+    "lint": "npx tslint src/*",
+    "lint:fix": "npx tslint src/* --fix",
+    "docs": "npx typedoc src",
+    "test": "npx jest src",
+    "test:coverage": "npx jest --coverage src && npm run test:badge",
+    "test:badge": "npx lcov-badge-generator -o coverage/badge.svg coverage/lcov.info",
+    "test:watch": "npx jest --watchAll src"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  },
+  "keywords": [
+    "nemo",
+    "et"
+  ],
+  "author": "AdeliaHartmann",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "jest": "^25",
+    "ts-jest": "^25.5.1",
+    "tslint": "^6.1.2",
+    "tslint-config-airbnb": "^5.11.2",
+    "typedoc": "^0.17.6",
+    "typescript": "^3.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TyraWilderman/hicpariatur.git"
+  }
+}
